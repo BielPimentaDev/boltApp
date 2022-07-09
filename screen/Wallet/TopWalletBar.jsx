@@ -1,8 +1,7 @@
 import React from "react";
 import { Entypo } from "@expo/vector-icons";
 import { Image, Text, TouchableHighlight, View } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
-import { StatusBar } from "expo-status-bar";
+
 export default function TopWalletBar() {
   return (
     <View

@@ -1,12 +1,13 @@
 //import liraries
 import React, { Component } from "react";
 import TopBar from "../../components/TopBar";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, StatusBar } from "react-native";
 
 import BottomSlide from "./BottomSlide";
 
 // create a component
 const Book = () => {
+  <StatusBar style="auto" />;
   return (
     <View style={styles.container}>
       <TopBar />
@@ -66,18 +67,18 @@ const styles = StyleSheet.create({
     marginHorizontal: "auto",
   },
   ball: {
-    width: 10,
-    height: 10,
+    width: 8,
+    height: 8,
     backgroundColor: "#415B5E",
 
-    borderRadius: "50%",
+    borderRadius: 50,
   },
   activeBall: {
-    width: 15,
-    height: 15,
+    width: 12,
+    height: 12,
     backgroundColor: "#E3E4E4",
 
-    borderRadius: "50%",
+    borderRadius: 50,
   },
 });
 

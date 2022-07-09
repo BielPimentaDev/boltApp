@@ -36,6 +36,11 @@ const styles = StyleSheet.create({
   container: {
     width: "90%",
     marginHorizontal: "auto",
+    shadowColor: "#19BDB1",
+    shadowOffset: { width: 10, height: -50 },
+    shadowOpacity: 0.2,
+    shadowRadius: 60,
+    elevation: 24,
   },
   box: {
     justifyContent: "center",

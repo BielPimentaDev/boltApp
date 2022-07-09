@@ -19,7 +19,7 @@ const Item = ({ title, header }) => (
       alignItems: "center",
       gap: 10,
       borderBottomWidth: 1,
-      borderColor: "#4E4E4E",
+      borderColor: "#313131",
     }}
   >
     <AntDesign name="clockcircle" size={20} color="#7C7C7C" />
@@ -71,7 +71,7 @@ export const HomeList = () => {
             paddingLeft: 15,
           }}
         >
-          <AntDesign name="clockcircle" size={24} color="#DCDCDC" />
+          <AntDesign name="clockcircle" size={16} color="#DCDCDC" />
         </View>
       </View>
       <FlatList
@@ -94,6 +94,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 15,
     width: "80%",
+    marginHorizontal: "auto",
     backgroundColor: "#021C19",
     shadowColor: "#19BDB1",
     shadowOffset: { width: 10, height: -50 },
@@ -103,7 +104,8 @@ const styles = StyleSheet.create({
   },
   boxListTitle: {
     width: "100%",
-    padding: 10,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
     backgroundColor: "#093936",
     borderRadius: 15,
     flexDirection: "row",

@@ -1,7 +1,15 @@
 //import liraries
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
-import { FlatList } from "react-native-web";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  FlatList,
+  SafeAreaView,
+  ScrollView,
+} from "react-native";
+
 import { Entypo } from "@expo/vector-icons";
 
 // create a component
@@ -10,10 +18,43 @@ const Items = ({ item }) => {
   return (
     <View style={styles.list}>
       <View style={{ gap: 20, flexDirection: "row" }}>
-        <Image
-          style={{ width: 40, height: 28, borderRadius: 3 }}
-          source={require(`../../assets/images/` + item.pic)}
-        />
+        {item.pic == "money.png" && (
+          <Image
+            style={{ width: 40, height: 28, borderRadius: 3 }}
+            source={require("../../assets/images/money.png")}
+          />
+        )}
+        {item.pic == "avatar.png" && (
+          <Image
+            style={{ width: 40, height: 28, borderRadius: 3 }}
+            source={require("../../assets/images/avatar.png")}
+          />
+        )}
+        {item.pic == "another_avatar.png" && (
+          <Image
+            style={{ width: 40, height: 28, borderRadius: 3 }}
+            source={require("../../assets/images/another_avatar.png")}
+          />
+        )}
+        {item.pic == "case.png" && (
+          <Image
+            style={{ width: 40, height: 28, borderRadius: 3 }}
+            source={require("../../assets/images/case.png")}
+          />
+        )}
+        {item.pic == "add.png" && (
+          <Image
+            style={{ width: 40, height: 28, borderRadius: 3 }}
+            source={require("../../assets/images/add.png")}
+          />
+        )}
+        {item.pic == "applepay.png" && (
+          <Image
+            style={{ width: 40, height: 28, borderRadius: 3 }}
+            source={require("../../assets/images/applepay.png")}
+          />
+        )}
+
         <View>
           <Text style={styles.itemTitle}>{item.title}</Text>
           <Text style={styles.itemSubtitle}>{item.subtitle}</Text>
@@ -28,7 +69,9 @@ const WalletList = ({ title, data }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
-      <FlatList data={data} renderItem={(item) => Items(item)} />
+      {data.length > 0 && (
+        <FlatList data={data} renderItem={(item) => Items(item)} />
+      )}
     </View>
   );
 };
@@ -39,9 +82,14 @@ const styles = StyleSheet.create({
     backgroundColor: "#052826",
     width: "90%",
     marginBottom: 20,
-    justifyContent: "center",
+
     borderRadius: 12,
     marginHorizontal: "auto",
+    shadowColor: "#19BDB1",
+    shadowOffset: { width: 10, height: -50 },
+    shadowOpacity: 0.2,
+    shadowRadius: 60,
+    elevation: 24,
   },
   title: {
     fontFamily: "montBold",

@@ -72,12 +72,11 @@ const BottomSlide = () => {
 const styles = StyleSheet.create({
   container: {},
   topSide: {
-    marginTop: 15,
-
     flexDirection: "row",
     justifyContent: "space-around",
   },
   topTextTitle: {
+    paddingTop: 10,
     fontFamily: "montBoldItalic",
     color: "#DCDCDC",
     fontSize: 20,

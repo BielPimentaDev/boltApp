@@ -28,13 +28,7 @@ const Home = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-
     backgroundColor: "#0A272B",
-  },
-  title: {
-    color: "#DCDCDC",
-    fontFamily: "montBoldItalic",
-    fontSize: 28,
   },
   wether: {
     width: 150,
@@ -42,10 +36,18 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: "70%",
   },
+  title: {
+    color: "#DCDCDC",
+    fontFamily: "montBoldItalic",
+    fontSize: 28,
+    paddingHorizontal: 20,
+    marginTop: 10,
+  },
   subtitle: {
     fontFamily: "montLight",
     color: "#DCDCDC",
     fontSize: 15,
+    paddingHorizontal: 20,
   },
 });
 

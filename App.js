@@ -1,18 +1,13 @@
-
 import { StyleSheet, Text, View, Image, TouchableHighlight } from 'react-native';
-;
-import CheckBox from '@react-native-community/checkbox';
-import { LinearGradient } from 'expo-linear-gradient';
 import {useFonts} from 'expo-font'
-import AppLoading from 'expo-app-loading';
-import { useState } from 'react';
-
-import Book from './screen/Book/Index';
+import Login from './screen/Login';
+import Home from './screen/Home/Index';
 import Wallet from './screen/Wallet/Index';
 
+import Book from './screen/Book/Index';
 
 export default function App() {
-  const [isChecked, setIsChecked] = useState(false)
+
  
   const [loaded] = useFonts({
    dm : require('./assets/fonts/DMSans-Medium.ttf'),
@@ -30,20 +25,18 @@ export default function App() {
   }
   return (
     
-   
-   <Wallet/>
+      //<Login/>
+    <Home/>
+//<Book/>
+     //<Wallet/>
+  
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    position: 'relative',
-    
-    flex:1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    alignContent : 'center',
-    backgroundColor: '#073633',
+    backgroundColor: '#fff',
+    flex:1
 
   },
   banner:{
